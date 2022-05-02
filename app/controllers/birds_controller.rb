@@ -16,4 +16,10 @@ class BirdsController < ApplicationController
     end
   end
 
+  # Post /birds
+  def create
+    bird = Bird.create(params)
+    render json: bird, status: :created
+  end
+
 end
